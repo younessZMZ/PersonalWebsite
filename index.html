@@ -28,6 +28,68 @@
 
     </div>
 </div>
+<!--------------------About -------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    I'm a software engineer, I love using python for building new things, automating boring tasks
+                     and create the logic of applications and websites.
+                    I've worked as a full time quant developer for 3 years. I implemented many indices and finantial strategies using python models.
+                    I worked also on rebalancing and backtesting models.
+                    I worked also as an IT developer, refactoring legacy scripts and reviewing the pull requests to deliver high quality code.
+                    I worked as well on migrating the projects from old version of python to the latest versions.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Quantitative Development</span><br>Building models for investment strategies</li>
+                        <li><span>Front-end Development</span><br>Desining Web/App interfaces</li>
+                        <li><span>Back-end Development</span><br>Building APIs/packages</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>IT developer at SGATS</li>
+                        <li><span>2021 - 2022</span><br>Quant developer at SGATS</li>
+                        <li><span>2020 - 2021</span><br>Internship at SGATS</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020</span><br>Certificate on software engineering and technology of information</li>
+                        <li><span>2017</span><br>Preparatory classes MP</li>
+                        <li><span>2015</span><br>BAC math A</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
 </body>
 
 </html>
